@@ -2,10 +2,10 @@ const express=require('express');
 const mongoose=require('mongoose');
 const path=require('path');
 const app=express();
-const port=3002;
+const port=5000;
 app.use(express.json()); //middleware- for parsing the data in the server side
 app.use(express.static(path.join(__dirname,'public'))); 
-mongoose.connect('mongodb://127.0.0.1:27017/user_management_db')
+mongoose.connect('mongodb://127.0.0.1:27017/user_management_db2')
 .then(()=> console.log('connected to MongoDB'))
 .catch(err=>console.error('error connecting to mongoDb:',err));
 const useerSchema=new mongoose.Schema({
